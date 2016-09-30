@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
   var timer = document.getElementsByTagName('h3')[1];
   var buttons = document.getElementsByTagName('button');
   var audio = document.getElementsByTagName('audio')[0];
-  var muteButton = document.getElementsByTagName('li')[2];
+  // var muteButton = document.getElementsByTagName('li')[2];
 
   function play() {
     music.play();
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     scoreNum = 0;
     setInterval(addJewels, 1500);
     catchJewels();
-    // countDown();
+    countDown();
     score.innerHTML = scoreNum;
     welcome.style.display = "none";
     document.getElementById('game-won').style.display = "none";
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     basket.style.left = "0";
   };
 
-  muteButton.addEventListener('click', toggleMute);
+  // muteButton.addEventListener('click', toggleMute);
 
   function toggleMute() {
     audio.mute == false ? audio.muted = true : audio.muted = false;
