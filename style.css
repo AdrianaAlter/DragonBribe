@@ -1,0 +1,244 @@
+html {
+  padding-top: 40px;
+  background-color: #001d0b;
+  background-image: url("https://www.transparenttextures.com/patterns/hixs-evolution.png");
+  font-family: 'Metamorphous', cursive;
+  text-align: center;
+  color: #001d0b;
+}
+
+button {
+  font-family: 'Metamorphous', cursive;
+  text-shadow: 1px 1px #001d0b;
+  z-index: 1;
+  transition: background 2s, box-shadow 2s, color 2s;
+  padding: 0;
+  background-image: url('./images/elements/button.png');
+  position: absolute;
+  bottom: 3%;
+  left: 46%;
+  height: 85px;
+  width: 85px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  outline: none;
+  border: none;
+  margin-top: 12%;
+  color:  #001d0b;
+  cursor: pointer;
+  font-weight: bold !important;
+  font-size: 18px;
+  letter-spacing: 2px;
+  box-shadow: 1px -1px 20px 15px #D0FA96;
+}
+
+button:hover {
+  box-shadow: 1px -1px 20px 15px #001D0B;
+  background-image: url('./images/elements/button_hover.png');
+  color: oldlace;
+}
+
+.anim {
+  display: block;
+  height: 213px;
+  width: 28px;
+  margin: auto;
+  border: 1px solid black;
+  background-image: url('http://opengameart.org/sites/default/files/styles/medium/public/crystals3216all.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: spin 4s steps(8) infinite;
+}
+
+@keyframes spin {
+  from {
+    background-position-x: 0px;
+  }
+  to {
+    background-position-x: -228px;
+  }
+}
+
+h3 {
+  padding-top: 14px;
+  margin: 0;
+  text-align: center;
+  font-family: 'Metamorphous', cursive;
+  color: #001d0b;
+}
+
+ul {
+  display: block;
+  list-style: none;
+  width: 100%;
+  height: 100px;
+  padding: 4px;
+  margin: 0;
+  float: left;
+}
+
+li {
+  display: block;
+  color: #001d0b;
+  height: 50px;
+  width: 50px;
+  float: left;
+  margin: 20px 14px;
+  background-size: contain;
+  background-image: url('./images/elements/li_square.png');
+  background-repeat: no-repeat;
+}
+
+li:first-child:before, li:nth-child(2):before {
+  display: block;
+  content: "Jewels";
+  position: absolute;
+  top: 7px;
+  font-weight: bold;
+  text-shadow: 2px 2px 3px #D0FA96, -2px -2px 3px #D0FA96;
+  color: #001D0B;
+}
+li:nth-child(2):before {
+  content: "Time";
+  left: 98.5px;
+}
+
+li:last-child {
+  float: right;
+}
+
+p {
+  font-family: 'Oldenburg', cursive;
+  font-weight: bold;
+  z-index: 1;
+  font-size: 20px;
+  padding: 0 180px;
+  background-repeat: no-repeat;
+}
+.group:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+#welcome {
+  background-image: url('./images/backgrounds/welcome.jpg') !important;
+  background-size: cover;
+}
+#welcome, #gamespace, #game-won, #game-lost {
+  box-shadow: inset 5px 5px 5px black;
+  width: 90%;
+  margin: auto;
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+}
+
+#gamespace, #game-won, #game-lost {
+  display: none;
+}
+
+#gamespace {
+  background-image: url('./images/backgrounds/gold.jpg');
+}
+
+#game-won {
+  background-image: url('./images/backgrounds/gold5.jpg');
+  background-position-x: -8px;
+}
+
+#game-lost {
+  background-image: url('./images/backgrounds/gold4.jpg');
+}
+
+#welcome:after {
+  opacity: 1;
+  z-index: 0;
+  content: "";
+  display: none;
+  height: 50%;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("./images/backgrounds/gold2.jpg");
+}
+
+.won-pic {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  display: none;
+  opacity: 1;
+  background-image: url('http://1.bp.blogspot.com/-u0mBTDYRXHE/UNRbc2nT9dI/AAAAAAAAdxM/V3zVHtyWUYA/s1600/sparkle+Effect+master+5.png');
+}
+
+.lost-pic, .welcome-pic, .welcome-pic-2 {
+  height: 500px;
+  width: 500px;
+  display: none;
+  background-image: url('http://pngimg.com/upload/dragon_PNG994.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: -3px;
+  margin: auto;
+  z-index: 1;
+}
+
+.welcome-pic {
+  background-image: url('http://pngimg.com/upload/dragon_PNG1614.png');
+  background-position-y: -124px;
+}
+
+.welcome-pic-2 {
+    background-image: url("https://openclipart.org/image/2400px/svg_to_png/257039/Low-Poly-Misty-Mountains.png");
+}
+
+#basket {
+  display: block;
+  height: 100px;
+  width: 100px;
+  background-image: url('./images/elements/basket.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+h1 {
+  display: block;
+  height: 40px;
+  font-size: 36px;
+  z-index: 1;
+}
+.jewel {
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  background-image: url('http://www.clker.com/cliparts/w/L/W/h/d/F/purple-amethyst-md.png');
+  margin: 0;
+  padding: 0;
+  float: left;
+  position: absolute;
+}
+
+@keyframes fall {
+  0% {
+    top: 0%;
+    display: block;
+  }
+  100% {
+    top: 100%;
+    display: none;
+  }
+}
