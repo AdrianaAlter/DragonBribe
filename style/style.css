@@ -1,5 +1,5 @@
 html {
-  padding-top: 40px;
+  padding-top: 6vh;
   background-color: #001d0b;
   background-image: url("https://www.transparenttextures.com/patterns/hixs-evolution.png");
   font-family: 'Metamorphous', cursive;
@@ -7,35 +7,34 @@ html {
   color: #001d0b;
 }
 
-button {
+button, button:hover {
   font-family: 'Metamorphous', cursive;
-  text-shadow: 1px 1px #001d0b;
+  text-shadow: .1vh .1vh #001d0b;
   z-index: 1;
   transition: background 2s, box-shadow 2s, color 2s;
   padding: 0;
-  background-image: url('./images/elements/button.png');
+  background-image: url('../images/elements/button.png');
   position: absolute;
-  bottom: 3%;
-  left: 46%;
-  height: 85px;
-  width: 85px;
+  bottom: 3vh;
+  left: 40vw;
+  height: 15vh;
+  width: 15vh;
   border-radius: 50%;
   background-position: center;
   background-repeat: no-repeat;
   outline: none;
   border: none;
-  margin-top: 12%;
   color:  #001d0b;
   cursor: pointer;
-  font-weight: bold !important;
-  font-size: 18px;
+  font-weight: bold;
+  font-size: 1.2vw;
   letter-spacing: 2px;
   box-shadow: 1px -1px 20px 15px #D0FA96;
 }
 
 button:hover {
   box-shadow: 1px -1px 20px 15px #001D0B;
-  background-image: url('./images/elements/button_hover.png');
+  background-image: url('../images/elements/button_hover.png');
   color: oldlace;
 }
 
@@ -61,7 +60,7 @@ button:hover {
 }
 
 h3 {
-  padding-top: 14px;
+  padding-top: 2vh;
   margin: 0;
   text-align: center;
   font-family: 'Metamorphous', cursive;
@@ -72,21 +71,23 @@ ul {
   display: block;
   list-style: none;
   width: 100%;
-  height: 100px;
+  height: 20%;
   padding: 4px;
   margin: 0;
   float: left;
+  font-size: 2.8vh;
 }
 
 li {
   display: block;
   color: #001d0b;
-  height: 50px;
-  width: 50px;
+  height: 8vh;
+  width: 8vh;
   float: left;
-  margin: 20px 14px;
+  margin: 5vh 1vh;
   background-size: contain;
-  background-image: url('./images/elements/li_square.png');
+  background-position: center;
+  background-image: url('../images/elements/li_square.png');
   background-repeat: no-repeat;
 }
 
@@ -94,14 +95,15 @@ li:first-child:before, li:nth-child(2):before {
   display: block;
   content: "Jewels";
   position: absolute;
-  top: 7px;
+  top: 2vh;
+  text-align: center;
   font-weight: bold;
   text-shadow: 2px 2px 3px #D0FA96, -2px -2px 3px #D0FA96;
   color: #001D0B;
+  font-size: 2.5vh;
 }
 li:nth-child(2):before {
   content: "Time";
-  left: 98.5px;
 }
 
 li:last-child {
@@ -113,8 +115,9 @@ p {
   font-family: 'Oldenburg', cursive;
   font-weight: bold;
   z-index: 1;
-  font-size: 20px;
-  padding: 0 180px;
+  font-size: 1.8vw;
+  padding: 0 8vw;
+  margin: 0;
   background-repeat: no-repeat;
 }
 .group:after {
@@ -124,17 +127,18 @@ p {
 }
 
 #welcome {
-  background-image: url('./images/backgrounds/welcome.jpg') !important;
+  background-image: url('../images/backgrounds/welcome.jpg');
   background-size: cover;
 }
 #welcome, #gamespace, #game-won, #game-lost {
   box-shadow: inset 5px 5px 5px black;
-  width: 90%;
+  width: 90vw;
   margin: auto;
   position: relative;
-  height: 500px;
+  height: 85vh;
   overflow: hidden;
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   display: block;
 }
@@ -144,16 +148,16 @@ p {
 }
 
 #gamespace {
-  background-image: url('./images/backgrounds/gold.jpg');
+  background-image: url('../images/backgrounds/gold.jpg');
 }
 
 #game-won {
-  background-image: url('./images/backgrounds/gold5.jpg');
+  background-image: url('../images/backgrounds/gold5.jpg');
   background-position-x: -8px;
 }
 
 #game-lost {
-  background-image: url('./images/backgrounds/gold4.jpg');
+  background-image: url('../images/backgrounds/gold4.jpg');
 }
 
 #welcome:after {
@@ -167,7 +171,7 @@ p {
   top: 0;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url("./images/backgrounds/gold2.jpg");
+  background-image: url("../images/backgrounds/gold2.jpg");
 }
 
 .won-pic {
@@ -204,9 +208,10 @@ p {
 
 #basket {
   display: block;
-  height: 100px;
-  width: 100px;
-  background-image: url('./images/elements/basket.png');
+  height: 15vh;
+  width: 15vh;
+  background-image: url('../images/elements/basket.png');
+  background-position:center;
   background-size: contain;
   background-repeat: no-repeat;
   margin: 0;
@@ -217,16 +222,15 @@ p {
 
 h1 {
   display: block;
-  height: 40px;
-  font-size: 36px;
+  font-size: 4vw;
+  margin: 6vh auto 0 auto;
   z-index: 1;
 }
 .jewel {
   background-size: contain;
   background-repeat: no-repeat;
-  height: 40px;
-  width: 40px;
-  background-image: url('http://www.clker.com/cliparts/w/L/W/h/d/F/purple-amethyst-md.png');
+  height: 6.5vh;
+  width: 6.5vh;
   margin: 0;
   padding: 0;
   float: left;
