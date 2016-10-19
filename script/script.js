@@ -93,23 +93,20 @@ document.addEventListener('DOMContentLoaded', function(e) {
   };
 
   function moveBasket(e) {
-    var basketLeft = basket.getBoundingClientRect().left;
-    var basketRight = basket.getBoundingClientRect().right;
-    var basketWidth = basketRight - basketLeft;
-    var step = basketWidth / 1000;
-    var gameLeft = gamespace.getBoundingClientRect().left;
-    var gameRight = gamespace.getBoundingClientRect().right;
+    var margin = parseInt(getComputedStyle(gamespace).marginLeft.split("p")[0]);
+    var basketLeft = parseInt(getComputedStyle(basket).left);
+    var basketWidth = parseInt(getComputedStyle(basket).width.split("p")[0]);
+    var step = basketWidth / 10;
+    var gameRight = parseInt(getComputedStyle(document.getElementsByTagName("body")[0]).width.split("p")[0]) - margin;
+
     if (e.keyCode == 37) {
-      if (basketLeft > gameLeft && basketLeft - step > gameLeft) {
-        basket.style.left = (basketLeft - 100 - step) + 'px';
+      if (basketLeft - step >= 0) {
+        basket.style.left = (basketLeft - step) + 'px';
       }
     }
     else if (e.keyCode == 39) {
-      if (basketRight + step < gameRight) {
-        basket.style.left = (basketRight + step) + 'px';
-      }
-      else {
-        null;
+      if (basketLeft + basketWidth + step + margin <= gameRight) {
+        basket.style.left = (basketLeft + step) + 'px';
       }
     }
   };
