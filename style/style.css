@@ -38,27 +38,6 @@ button:hover {
   color: oldlace;
 }
 
-.anim {
-  display: block;
-  height: 213px;
-  width: 28px;
-  margin: auto;
-  border: 1px solid black;
-  background-image: url('http://opengameart.org/sites/default/files/styles/medium/public/crystals3216all.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  animation: spin 4s steps(8) infinite;
-}
-
-@keyframes spin {
-  from {
-    background-position-x: 0px;
-  }
-  to {
-    background-position-x: -228px;
-  }
-}
-
 h3, i {
   padding-top: 2vh;
   margin: 0;
@@ -157,58 +136,12 @@ p {
 }
 
 #game-won {
-  background-image: url('../images/backgrounds/gold5.jpg');
+  background-image: url('../images/backgrounds/won.jpg');
   background-position-x: -8px;
 }
 
 #game-lost {
-  background-image: url('../images/backgrounds/gold4.jpg');
-}
-
-#welcome:after {
-  opacity: 1;
-  z-index: 0;
-  content: "";
-  display: none;
-  height: 50%;
-  width: 50%;
-  position: absolute;
-  top: 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-image: url("../images/backgrounds/gold2.jpg");
-}
-
-.won-pic {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  display: none;
-  opacity: 1;
-  background-image: url('http://1.bp.blogspot.com/-u0mBTDYRXHE/UNRbc2nT9dI/AAAAAAAAdxM/V3zVHtyWUYA/s1600/sparkle+Effect+master+5.png');
-}
-
-.lost-pic, .welcome-pic, .welcome-pic-2 {
-  height: 500px;
-  width: 500px;
-  display: none;
-  background-image: url('http://pngimg.com/upload/dragon_PNG994.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: -3px;
-  margin: auto;
-  z-index: 1;
-}
-
-.welcome-pic {
-  background-image: url('http://pngimg.com/upload/dragon_PNG1614.png');
-  background-position-y: -124px;
-}
-
-.welcome-pic-2 {
-    background-image: url("https://openclipart.org/image/2400px/svg_to_png/257039/Low-Poly-Misty-Mountains.png");
+  background-image: url('../images/backgrounds/lost.jpg');
 }
 
 #basket {
@@ -231,6 +164,7 @@ h1 {
   margin: 6vh auto 0 auto;
   z-index: 1;
 }
+
 .jewel {
   background-size: contain;
   background-repeat: no-repeat;
