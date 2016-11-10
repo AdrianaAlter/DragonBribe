@@ -4,26 +4,10 @@ window.addEventListener('load', function(e) {
     'diamond1',
     'diamond2',
     'diamond3',
-    'diamond4',
-    'diamond5',
-    'diamond6',
-    'diamond7',
-    'diamond8',
-    'diamond9',
-    'diamond10',
     'sapphire1',
-    'sapphire2',
-    'sapphire3',
     'amber',
     'ruby1',
-    'ruby2',
-    'amethyst1',
-    'amethyst2',
-    'amethyst3',
-    'emerald1',
-    'emerald2',
-    'jasper',
-    'topaz'
+    'amethyst1'
   ];
 
   var basket = document.getElementById('basket');
