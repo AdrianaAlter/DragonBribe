@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function(e) {
     'topaz'
   ];
 
-  var music = new Audio("sounds/music.mp3");
   var basket = document.getElementById('basket');
   var gamespace = document.getElementById('gamespace');
   var gameWon = document.getElementById('game-won');
@@ -37,15 +36,16 @@ document.addEventListener('DOMContentLoaded', function(e) {
   var timer = document.getElementsByTagName('h3')[1];
   var buttons = document.getElementsByTagName('button');
   var audio = document.getElementsByTagName('audio')[0];
-
   var muteButton = document.getElementsByTagName('li')[2];
+  var mute = false;
+  var music = new Audio("sounds/music.mp3");
 
   function play() {
+    var music = musicInit();
     welcome.style.display = "none";
     gameWon.style.display = "none";
     gameLost.style.display = "none";
     gamespace.style.display = "block";
-    music.play();
     timeLeft = 31;
     scoreNum = 0;
     setInterval(addJewels, 1500);
@@ -53,13 +53,24 @@ document.addEventListener('DOMContentLoaded', function(e) {
     countDown();
     score.innerHTML = scoreNum;
     basket.style.left = "0";
-  };
+  }
 
-  // muteButton.addEventListener('click', toggleMute);
+  function musicInit(){
+    if (!mute){
+      music.play();
+    }
+    var muteIcon = document.createElement("i");
+    muteIcon.className = "fa fa-volume-off fa-2x";
+    muteButton.appendChild(muteIcon);
 
-  function toggleMute() {
-    audio.mute == false ? audio.muted = true : audio.muted = false;
-  };
+    function toggleMute() {
+      mute ? mute = false : mute = true;
+      muteIcon.className = mute ? "fa fa-volume-up fa-2x" : "fa fa-volume-off fa-2x";
+      music.muted === false ? music.muted = true : music.muted = false;
+    }
+    muteButton.addEventListener('click', toggleMute);
+  }
+
 
   buttons[0].addEventListener('click', play);
   buttons[1].addEventListener('click', reset);
@@ -96,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     var margin = parseInt(getComputedStyle(gamespace).marginLeft.split("p")[0]);
     var basketLeft = parseInt(getComputedStyle(basket).left);
     var basketWidth = parseInt(getComputedStyle(basket).width.split("p")[0]);
-    var step = basketWidth / 10;
+    var step = basketWidth / 5;
     var gameRight = parseInt(getComputedStyle(document.getElementsByTagName("body")[0]).width.split("p")[0]) - margin;
 
     if (e.keyCode == 37) {
@@ -138,7 +149,9 @@ document.addEventListener('DOMContentLoaded', function(e) {
         if (jewelBottom >= basketTop && jewelBottom <= threeQuartersHeight) {
           jewels[i].style.display = "none";
           var sound = new Audio("sounds/sound.wav");
-          sound.play();
+          if (!mute){
+            sound.play();
+          }
           scoreNum += 1;
           score.innerHTML = scoreNum;
         }
@@ -164,7 +177,9 @@ document.addEventListener('DOMContentLoaded', function(e) {
     music.pause();
     music = new Audio("sounds/music.mp3");
     var chord = new Audio("sounds/chord.wav");
-    chord.play();
+    if (!mute){
+      chord.play();
+    }
     gamespace.style.display = "none";
     if (scoreNum >= 50) {
       document.getElementById('game-won').style.display = "block";

@@ -59,12 +59,17 @@ button:hover {
   }
 }
 
-h3 {
+h3, i {
   padding-top: 2vh;
   margin: 0;
   text-align: center;
   font-family: 'Metamorphous', cursive;
   color: #001d0b;
+}
+
+i {
+  padding-top: 1.4vh;
+  cursor: pointer;
 }
 
 ul {
@@ -107,8 +112,8 @@ li:nth-child(2):before {
 }
 
 li:last-child {
-  display: none;
   float: right;
+  margin-right: 1.8vh;
 }
 
 p {
