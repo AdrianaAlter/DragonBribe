@@ -10,15 +10,17 @@ html {
 button, button:hover {
   font-family: 'Metamorphous', cursive;
   text-shadow: .1vh .1vh #001d0b;
+  text-align: center;
   z-index: 1;
-  transition: background 2s, box-shadow 2s, color 2s;
+  transition: box-shadow 2s, color 2s, font-size 2s;
   padding: 0;
-  background-image: url('../images/elements/button.png');
+  background-image: url('../images/elements/button.jpg');
+  background-size: cover;
   position: absolute;
   bottom: 3vh;
   left: 40vw;
-  height: 15vh;
-  width: 15vh;
+  height: 14vh;
+  width: 14vh;
   border-radius: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -29,13 +31,12 @@ button, button:hover {
   font-weight: bold;
   font-size: 1.2vw;
   letter-spacing: 2px;
-  box-shadow: 1px -1px 20px 15px #D0FA96;
 }
 
 button:hover {
-  box-shadow: 1px -1px 20px 15px #001D0B;
-  background-image: url('../images/elements/button_hover.png');
+  box-shadow: 1px -1px 20px 15px #D0FA96;
   color: oldlace;
+  font-size: 1.4vw;
 }
 
 h3, i {
