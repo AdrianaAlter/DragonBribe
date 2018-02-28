@@ -165,7 +165,7 @@ window.addEventListener('load', function(e) {
       chord.play();
     }
     gamespace.style.display = "none";
-    if (scoreNum >= 50) {
+    if (scoreNum >= 30) {
       document.getElementById('game-won').style.display = "block";
       document.getElementById('game-lost').style.display = "none";
     }
